@@ -56,7 +56,7 @@ module Puppet
         return nil unless users = resource[:user]
 
         targets = []
-        for user in users:
+        for user in users do
           begin
             targets << File.expand_path("~#{user}/.ssh/authorized_keys")
           rescue
